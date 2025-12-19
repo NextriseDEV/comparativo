@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparativo de Custos: RD Station vs Umbler Talk</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen pb-12">
+
+    <!-- Header -->
+    <nav class="bg-white border-b border-slate-200 py-6 mb-8">
+        <div class="max-w-5xl mx-auto px-6 flex justify-between items-center">
+            <h1 class="text-xl font-extrabold text-slate-800 tracking-tight flex items-center gap-2">
+                <i data-lucide="layers" class="text-slate-600"></i>
+                Relatório Comparativo de Custos
+            </h1>
+            <span class="bg-slate-100 text-slate-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border border-slate-200">
+                Dados Estruturais
+            </span>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-6">
+        
+        <!-- Intro Section -->
+        <section class="mb-10">
+            <h2 class="text-3xl font-bold text-slate-900 mb-2 text-center md:text-left">Projeção RD Station vs Umbler Talk</h2>
+            <p class="text-slate-500 max-w-2xl text-center md:text-left">
+                Apresentação objetiva de valores para uma estrutura de <strong>6 usuários</strong> e volume de <strong>1.000 mensagens/mês</strong>.
+            </p>
+        </section>
+
+        <!-- Cards de Custo Total -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            <div class="bg-white rounded-2xl p-8 border-t-4 border-cyan-500 shadow-sm border-x border-b border-slate-200">
+                <p class="text-slate-400 font-bold uppercase text-xs tracking-widest mb-1">RD Station (Basic)</p>
+                <h3 class="text-3xl font-black text-slate-800 mb-2">R$ 22.068,00 <small class="text-sm font-normal text-slate-400">/ano</small></h3>
+                <div class="flex items-center gap-2 text-slate-500 text-sm">
+                    <i data-lucide="users" size="16"></i>
+                    <span>Usuários Ilimitados</span>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl p-8 border-t-4 border-yellow-500 shadow-sm border-x border-b border-slate-200">
+                <p class="text-slate-400 font-bold uppercase text-xs tracking-widest mb-1">Umbler Talk (Professional)</p>
+                <h3 class="text-3xl font-black text-slate-800 mb-2">R$ 11.208,00 <small class="text-sm font-normal text-slate-400">/ano</small></h3>
+                <div class="flex items-center gap-2 text-slate-500 text-sm">
+                    <i data-lucide="user-check" size="16"></i>
+                    <span>Licenciamento para 6 usuários</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabela Comparativa -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden mb-10">
+            <div class="p-6 border-b border-slate-100 flex items-center gap-2 font-bold text-slate-800">
+                <i data-lucide="table" size="18"></i>
+                Composição de Valores
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left">
+                    <thead>
+                        <tr class="bg-slate-50">
+                            <th class="p-4 text-xs font-bold text-slate-400 uppercase">Item</th>
+                            <th class="p-4 text-xs font-bold text-slate-400 uppercase">RD Station (Basic)</th>
+                            <th class="p-4 text-xs font-bold text-slate-400 uppercase">Umbler Talk (Prof.)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        <tr>
+                            <td class="p-4 text-slate-600">Mensalidade (Software/Acesso)</td>
+                            <td class="p-4 font-semibold text-slate-800">R$ 1.499,00</td>
+                            <td class="p-4 font-semibold text-slate-800">R$ 594,00</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 text-slate-600">Custo Fixo Anual</td>
+                            <td class="p-4 font-semibold text-slate-800">R$ 17.988,00</td>
+                            <td class="p-4 font-semibold text-slate-800">R$ 7.128,00</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 text-slate-600">Mensagens (1.000/mês)</td>
+                            <td class="p-4 font-semibold text-slate-800">R$ 340,00</td>
+                            <td class="p-4 font-semibold text-slate-800">R$ 340,00</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 text-slate-600 italic">Total Mensagens (Ano)</td>
+                            <td class="p-4 font-semibold text-slate-400">R$ 4.080,00</td>
+                            <td class="p-4 font-semibold text-slate-400">R$ 4.080,00</td>
+                        </tr>
+                        <tr class="bg-slate-50">
+                            <td class="p-4 font-bold text-slate-900 uppercase text-xs">INVESTIMENTO ANUAL TOTAL</td>
+                            <td class="p-4 font-bold text-slate-900 text-lg">R$ 22.068,00</td>
+                            <td class="p-4 font-bold text-slate-900 text-lg">R$ 11.208,00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Gráfico -->
+        <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm mb-10">
+            <h3 class="text-lg font-bold text-slate-800 mb-6 flex items-center gap-2 text-center md:text-left">
+                <i data-lucide="trending-up" class="text-slate-400"></i>
+                Progressão de Investimento Acumulado (12 Meses)
+            </h3>
+            <div class="h-80 w-full">
+                <canvas id="costChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Especificações Neutras -->
+        <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
+            <h3 class="text-xl font-bold mb-6 text-slate-800">Características dos Modelos</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <h4 class="font-bold text-cyan-600 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-cyan-500"></span>
+                        RD Station
+                    </h4>
+                    <ul class="text-sm text-slate-600 space-y-2 list-disc pl-5">
+                        <li>Foco em gestão de base de contatos (CRM).</li>
+                        <li>Mensalidade fixa independente do número de atendentes.</li>
+                        <li>Inclui franquia para 1.000 clientes únicos atendidos.</li>
+                        <li>Estrutura de software robusta para múltiplos canais.</li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="font-bold text-yellow-600 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-yellow-500"></span>
+                        Umbler Talk
+                    </h4>
+                    <ul class="text-sm text-slate-600 space-y-2 list-disc pl-5">
+                        <li>Foco em produtividade e atendimento WhatsApp.</li>
+                        <li>Cobrança baseada no número de usuários (licenciamento).</li>
+                        <li>Ferramentas de automação e distribuição de leads.</li>
+                        <li>Histórico centralizado para toda a equipe.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        lucide.createIcons();
+
+        const ctx = document.getElementById('costChart').getContext('2d');
+        const labels = ['Mês 1', 'Mês 3', 'Mês 6', 'Mês 9', 'Mês 12'];
+        
+        const rdData = [1839, 5517, 11034, 16551, 22068];
+        const umblerData = [934, 2802, 5604, 8406, 11208];
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'RD Station',
+                        data: rdData,
+                        borderColor: '#06b6d4',
+                        backgroundColor: 'transparent',
+                        borderWidth: 3,
+                        tension: 0,
+                        pointBackgroundColor: '#06b6d4'
+                    },
+                    {
+                        label: 'Umbler Talk',
+                        data: umblerData,
+                        borderColor: '#eab308',
+                        backgroundColor: 'transparent',
+                        borderWidth: 3,
+                        tension: 0,
+                        pointBackgroundColor: '#eab308'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'top', align: 'center' }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) {
+                                return 'R$ ' + value.toLocaleString();
+                            }
+                        },
+                        grid: { color: '#f1f5f9' }
+                    },
+                    x: { grid: { display: false } }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
