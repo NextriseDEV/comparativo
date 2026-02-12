@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RS Consultoria: Especialista em BPO Financeiro, Gestão Estratégica e Planejamento Tributário. Liderada por Rodrigo Sousa.">
+    <title>RS Consultoria | Gestão Financeira Estratégica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset e Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f5f7fa;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Header e Hero Section */
+        header {
+            background: linear-gradient(135deg, #111827, #1f2937);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 20px;
+            margin-bottom: 35px;
+            opacity: 0.9;
+        }
+
+        /* Botões */
+        .btn {
+            display: inline-block;
+            padding: 16px 32px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #111827;
+        }
+
+        /* Seções */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #111827;
+            position: relative;
+        }
+
+        .section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #2563eb;
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .grid {
+            display: grid;
+            gap: 30px;
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            border-top: 5px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-top: 5px solid #2563eb;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: #2563eb;
+            font-size: 22px;
+        }
+
+        .icon-box {
+            font-size: 40px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        /* Benefícios */
+        .benefits ul {
+            list-style: none;
+        }
+
+        .benefits li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        .benefits li span {
+            color: #10b981;
+            margin-right: 12px;
+            font-weight: bold;
+        }
+
+        /* Testemunho */
+        .testimonial {
+            background: #111827;
+            color: white;
+            padding: 60px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .testimonial p {
+            font-size: 20px;
+            font-style: italic;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* CTA Final */
+        .cta {
+            background: #2563eb;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .cta h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        footer p {
+            opacity: 0.7;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 32px;
+            }
+            header p {
+                font-size: 18px;
+            }
+            .section h2 {
+                font-size: 28px;
+            }
+            .testimonial {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Gestão Financeira que Gera Resultado</h1>
+        <p>Transformamos dados em decisões estratégicas e potencial em performance.</p>
+        <a href="https://wa.me/5511951769953?text=Olá,%20gostaria%20de%20solicitar%20um%20diagnóstico%20financeiro." class="btn">Falar no WhatsApp</a>
+        <a href="#contato" class="btn btn-outline">Solicitar Diagnóstico</a>
+    </div>
+</header>
+
+<section class="section" id="sobre">
+    <div class="container">
+        <h2>Sobre a RS Consultoria</h2>
+        <p style="text-align:center; max-width:850px; margin:auto; font-size: 18px; color: #4b5563;">
+            Liderada por <strong>Rodrigo Sousa</strong>, administrador com mais de 15 anos de experiência financeira
+            e atuação em multinacional farmacêutica com responsabilidade LATAM, a RS Consultoria
+            entrega soluções completas em BPO Financeiro, Contabilidade, Fiscal e Planejamento Estratégico.
+        </p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Nossos 3 Pilares</h2>
+        <div class="grid grid-3">
+            <div class="card">
+                <div class="icon-box">📊</div>
+                <h3>Operacional</h3>
+                <p>Contas a pagar e receber, conciliação bancária, fluxo de caixa, emissão de notas e gestão financeira completa.</p>
+            </div>
+            <div class="card">
+                <div class="icon-box">⚖️</div>
+                <h3>Tributário</h3>
+                <p>Apuração de tributos, folha de pagamento, obrigações fiscais e conformidade contábil rigorosa.</p>
+            </div>
+            <div class="card">
+                <div class="icon-box">🚀</div>
+                <h3>Estratégico</h3>
+                <p>Planejamento financeiro, análise de indicadores (KPIs), dashboard gerencial e projeções de crescimento sustentável.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section benefits" style="background: #ebf2ff;">
+    <div class="container">
+        <h2>Benefícios para sua Empresa</h2>
+        <div class="grid grid-3">
+            <div class="card">
+                <ul>
+                    <li><span>✔</span> Redução de custos operacionais</li>
+                    <li><span>✔</span> Eliminação de erros manuais</li>
+                    <li><span>✔</span> Previsibilidade total do caixa</li>
+                    <li><span>✔</span> Conformidade fiscal absoluta</li>
+                </ul>
+            </div>
+            <div class="card">
+                <ul>
+                    <li><span>✔</span> Relatórios gerenciais mensais</li>
+                    <li><span>✔</span> Planejamento tributário estruturado</li>
+                    <li><span>✔</span> Segurança e sigilo de dados</li>
+                    <li><span>✔</span> Decisão baseada em dados reais</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Case de Sucesso</h2>
+        <div class="testimonial">
+            <p>
+                “A parceria com a RS Consultoria foi essencial para organizar nossa gestão,
+                otimizar recursos e tomar decisões com mais segurança e clareza. Recomendo para qualquer empresa que busca escala.”
+            </p>
+            <div style="margin-top: 20px;">
+                <strong style="color: #2563eb; font-size: 18px;">Brasil Excellence</strong><br>
+                <span>Empresa de Facilities (+300 colaboradores)</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta" id="contato">
+    <div class="container">
+        <h2>Pronto para crescer com controle e previsibilidade?</h2>
+        <p>A primeira etapa para transformar seu financeiro começa com um diagnóstico gratuito.</p>
+        <a href="https://wa.me/5511951769953" class="btn" style="background:white; color:#2563eb;">Solicitar Orçamento Agora</a>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>RS Consultoria © 2026 | Rodrigo Sousa - Todos os direitos reservados.</p>
+        <p>Contato Comercial: <strong>(11) 95176-9953</strong></p>
+        <p>São Paulo, SP</p>
+    </div>
+</footer>
+
+</body>
+</html>
+
