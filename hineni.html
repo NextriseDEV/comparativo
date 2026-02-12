@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hineni Multi Soluções | Ecossistema</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; background: radial-gradient(circle at top, #1a2a3a 0%, #0d1b2a 100%); color: #fff; min-height: 100vh; }
+        .hineni-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(193, 154, 107, 0.2); transition: 0.3s; }
+        .hineni-card:hover { border-color: #c19a6b; }
+        .gold-text { color: #c19a6b; }
+        .btn-hineni { background: linear-gradient(135deg, #c19a6b 0%, #8e6d45 100%); transition: 0.4s; }
+        .btn-hineni:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,0.4); }
+        input, select, textarea { background: rgba(0,0,0,0.2) !important; border: 1px solid rgba(255,255,255,0.1) !important; color: #fff !important; }
+        input:focus { border-color: #c19a6b !important; outline: none; }
+    </style>
+</head>
+<body class="py-12 px-4">
+
+    <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+            <img src="https://hinenimultisolucoes.com.br/wp-content/uploads/2024/03/Logo-Hineni-Horizontal-Branco.png" alt="Hineni" class="h-14 mx-auto mb-6">
+            <h1 class="text-2xl md:text-4xl font-bold uppercase tracking-[0.2em]">Mapeamento de <span class="gold-text">Parceiros</span></h1>
+            <div class="w-24 h-1 bg-gold mx-auto mt-4" style="background-color: #c19a6b;"></div>
+        </div>
+
+        <form id="hineniForm" class="space-y-6">
+            <div class="hineni-card p-8 rounded-3xl">
+                <h2 class="gold-text font-bold mb-6 flex items-center gap-3">
+                    <span class="bg-white/10 w-8 h-8 rounded-full flex items-center justify-center text-xs">01</span>
+                    DADOS CORPORATIVOS
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" name="nomeEmpresa" placeholder="Nome da Empresa" class="p-4 rounded-xl w-full" required>
+                    <input type="text" name="cnpj" placeholder="CNPJ" class="p-4 rounded-xl w-full">
+                    <select name="segmento" class="p-4 rounded-xl w-full">
+                        <option value="">Segmento...</option>
+                        <option value="Moveis">Móveis Planejados</option>
+                        <option value="Arquitetura">Arquitetura/Design</option>
+                        <option value="Servicos">Prestação de Serviços</option>
+                    </select>
+                    <input type="text" name="instagram" placeholder="Instagram/Site" class="p-4 rounded-xl w-full">
+                </div>
+            </div>
+
+            <div class="hineni-card p-8 rounded-3xl">
+                <h2 class="gold-text font-bold mb-6 flex items-center gap-3">
+                    <span class="bg-white/10 w-8 h-8 rounded-full flex items-center justify-center text-xs">02</span>
+                    MODELO DE NEGÓCIO
+                </h2>
+                <textarea name="servicos" placeholder="Descreva seus principais produtos e serviços..." class="p-4 rounded-xl w-full h-32 mb-4"></textarea>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" name="ticketMedio" placeholder="Ticket Médio (R$)" class="p-4 rounded-xl w-full">
+                    <input type="number" name="capacidadeMensal" placeholder="Capacidade Atendimento / Mês" class="p-4 rounded-xl w-full">
+                </div>
+            </div>
+
+            <div class="hineni-card p-6 rounded-3xl text-center border-dashed">
+                <p class="text-sm text-gray-400 mb-4 uppercase font-bold">Upload do Logotipo</p>
+                <input type="file" id="logoFile" accept="image/*" class="text-xs text-hineni-gold">
+            </div>
+
+            <button type="submit" id="btnSubmit" class="w-full btn-hineni text-white font-bold py-5 rounded-2xl shadow-xl uppercase tracking-widest text-lg">
+                Finalizar Cadastro Hineni
+            </button>
+        </form>
+    </div>
+
+    <script>
+        const _0x4f2a=["\x61\x75\x74\x68\x54\x6f\x6b\x65\x6e","\x48\x69\x6e\x65\x6e\x69\x5f\x53\x65\x63\x75\x72\x65\x5f\x32\x30\x32\x36\x5f\x40\x41\x6c\x70\x68\x61","\x50\x4f\x53\x54","\x6e\x6f\x2d\x63\x6f\x72\x73","\x68\x74\x74\x70\x73\x3a\x2f\x2f\x73\x63\x72\x69\x70\x74\x2e\x67\x6f\x6f\x67\x6c\x65\x2e\x63\x6f\x6d\x2f\x6d\x61\x63\x72\x6f\x73\x2f\x73\x2f\x41\x4b\x66\x79\x63\x62\x7a\x4c\x30\x59\x45\x69\x4b\x48\x70\x62\x4c\x66\x59\x53\x77\x38\x46\x73\x6f\x32\x32\x62\x70\x55\x43\x77\x33\x41\x61\x71\x5f\x2d\x46\x56\x66\x4d\x4d\x68\x74\x75\x46\x37\x42\x43\x35\x66\x6a\x64\x6a\x34\x32\x52\x62\x32\x49\x5a\x57\x7a\x7a\x6e\x35\x35\x49\x5a\x53\x42\x2f\x65\x78\x65\x63"];
+
+        document.getElementById('hineniForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const b = document.getElementById('btnSubmit');
+            b.disabled = true; b.innerText = "HOMOLOGANDO...";
+
+            const f = new FormData(this);
+            const d = Object.fromEntries(f.entries());
+            
+            // Atribuição Ofuscada do Token e URL
+            d[_0x4f2a[0]] = _0x4f2a[1]; 
+            const u = _0x4f2a[4];
+
+            const file = document.getElementById('logoFile').files[0];
+            if(file) {
+                const r = new FileReader();
+                r.onloadend = async () => { d.logoBase64 = r.result; await send(u, d); };
+                r.readAsDataURL(file);
+            } else { await send(u, d); }
+        });
+
+        async function send(u, d) {
+            try {
+                await fetch(u, { method: _0x4f2a[2], mode: _0x4f2a[3], body: JSON.stringify(d) });
+                alert("Cadastro Hineni recebido! Nossa equipe analisará os dados.");
+                location.reload();
+            } catch (e) { alert("Erro de rede. Tente novamente."); document.getElementById('btnSubmit').disabled = false; }
+        }
+    </script>
+</body>
+</html>
