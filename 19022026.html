@@ -1,96 +1,141 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Pauta Viva - Liderança UMADSA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposta Comercial - JC&D Design de Reformas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        body { font-family: 'Montserrat', sans-serif; background-color: #f0f2f5; color: #1c1e21; padding: 20px; }
-        .container { max-width: 700px; margin: auto; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); overflow: hidden; }
-        .header { background: linear-gradient(135deg, #6e8efb, #a777e3); color: white; padding: 40px 20px; text-align: center; }
-        .header h1 { margin: 0; font-size: 28px; text-transform: uppercase; letter-spacing: 2px; }
-        .header p { opacity: 0.9; font-weight: 300; }
-        
-        .section { padding: 25px; border-bottom: 1px solid #eee; transition: 0.3s; }
-        .section:hover { background-color: #fafafa; }
-        .time-badge { background: #e7f3ff; color: #1877f2; padding: 5px 12px; border-radius: 50px; font-size: 12px; font-weight: bold; display: inline-block; margin-bottom: 10px; }
-        
-        h2 { font-size: 18px; color: #4b4b4b; display: flex; align-items: center; margin-top: 0; }
-        h2 span { font-size: 24px; margin-right: 10px; }
-        
-        .action-item { background: #fff9e6; border-left: 4px solid #f3ba2f; padding: 10px; margin: 10px 0; border-radius: 4px; font-size: 14px; }
-        .interactive { border: 2px dashed #a777e3; padding: 15px; border-radius: 12px; background: #fdfaff; }
-        
-        ul { list-style: none; padding: 0; }
-        li { margin-bottom: 10px; display: flex; align-items: flex-start; }
-        li::before { content: "⚡"; margin-right: 10px; }
-        
-        .footer { text-align: center; padding: 20px; font-style: italic; color: #888; background: #f9f9f9; }
-        .btn-meet { display: inline-block; background: #00ac47; color: white; text-decoration: none; padding: 10px 20px; border-radius: 8px; margin-top: 15px; font-weight: bold; }
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@400;600&display=swap');
+        body { font-family: 'Open Sans', sans-serif; background-color: #f3f4f6; -webkit-print-color-adjust: exact; scroll-behavior: smooth; }
+        h1, h2, h3, h4, .font-title { font-family: 'Montserrat', sans-serif; }
+        .gradient-header { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); }
+        .card-module { border-left: 5px solid; transition: all 0.3s ease; }
+        .card-module:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+        .mod-1 { border-color: #ef4444; }
+        .mod-2 { border-color: #3b82f6; }
+        .mod-3 { border-color: #10b981; }
+        #discount-banner { transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); transform: translateY(0); }
+        .old-price { text-decoration: line-through; color: #94a3b8; font-size: 0.9rem; }
     </style>
 </head>
-<body>
+<body class="py-10 text-slate-800 relative">
 
-<div class="container">
-    <div class="header">
-        <h1>🚀 UMADSA EM MOVIMENTO</h1>
-        <p>Liderança Regional & Ministerial • Planejamento 2026</p>
-        <a href="https://meet.google.com/jop-kunr-gjz" class="btn-meet">ENTRAR NA SALA VIRTUAL</a>
-    </div>
-
-    <div class="section">
-        <span class="time-badge">20:00 - 20:15</span>
-        <h2><span>🔥</span> Start & Conexão</h2>
-        <ul>
-            <li>Oração de "destravar": Foco em disposição e ânimo.</li>
-            <li><strong>Check-in Rápido:</strong> Em uma palavra, como está sua Regional hoje?</li>
-        </ul>
-    </div>
-
-    <div class="section interactive">
-        <span class="time-badge">20:15 - 20:45</span>
-        <h2><span>📢</span> Momento "Pé no Chão"</h2>
-        <p><strong>Desafio:</strong> Por que estamos parados? Onde a engrenagem travou?</p>
-        <div class="action-item">
-            <strong>Dinâmica do Minuto:</strong> Cada líder terá 60 segundos para dizer qual o MAIOR obstáculo da sua região hoje. Sem rodeios!
+    <div id="discount-banner" class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-yellow-500 to-yellow-600 shadow-2xl border-b-4 border-yellow-700 no-print">
+        <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="bg-white text-yellow-600 rounded-full w-10 h-10 flex items-center justify-center font-bold shadow-sm">
+                    <i class="fa-solid fa-crown"></i>
+                </div>
+                <div>
+                    <p class="font-bold text-white text-sm md:text-base leading-tight">PARCEIRO NEXTRISE DETECTADO</p>
+                    <p class="text-yellow-100 text-xs">Desconto de 40% aplicado sobre o Plano Dominância.</p>
+                </div>
+            </div>
+            <div class="text-right">
+                <span class="block text-xs text-yellow-200 font-semibold uppercase">Novo Total (N3)</span>
+                <span class="block text-xl md:text-2xl font-extrabold text-white">R$ 1.798,62</span>
+            </div>
         </div>
     </div>
 
-    <div class="section">
-        <span class="time-badge">20:45 - 21:30</span>
-        <h2><span>📅</span> Missão 2026: O Mapa da Mina</h2>
-        <p>Não é "se", é "quando". Vamos desenhar o cronograma:</p>
-        <ul>
-            <li><strong>Blitz Regional:</strong> Calendário de invasão (visitas) nas congregações.</li>
-            <li><strong>Mão na Massa:</strong> Ações sociais que marquem o território.</li>
-            <li><strong>Tropa de Elite:</strong> Como vamos socorrer as festas das igrejas locais?</li>
-        </ul>
-        <div class="action-item">
-            <strong>Meta:</strong> Até o fim da reunião, cada um define sua primeira data de evento!
-        </div>
-    </div>
+    <div class="max-w-4xl mx-auto bg-white shadow-xl rounded-none overflow-hidden relative mt-16">
+        <header class="gradient-header text-white p-12 relative overflow-hidden">
+            <div class="absolute top-0 right-0 opacity-10 transform translate-x-10 -translate-y-10">
+                <i class="fa-solid fa-bullhorn text-9xl"></i>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 relative z-10">
+                <div class="bg-white p-4 rounded-lg shadow-lg">
+                    <img src="../../assets/galery/nextriselogo.png" alt="Nextrise" class="h-10">
+                </div>
+                <div class="text-center md:text-right">
+                    <h1 class="text-3xl font-extrabold tracking-tight">PROPOSTA COMERCIAL</h1>
+                    <p class="text-blue-400 font-bold uppercase tracking-widest text-sm">JC&D Design de Reformas</p>
+                </div>
+            </div>
+        </header>
 
-    <div class="section">
-        <span class="time-badge">21:30 - 21:50</span>
-        <h2><span>📱</span> Digital & Suporte</h2>
-        <ul>
-            <li>Como a Nextrise vai impulsionar seus eventos nas redes.</li>
-            <li>Padronização visual: Menos amadorismo, mais impacto.</li>
-        </ul>
-    </div>
+        <section class="p-10">
+            <h2 class="text-xl font-bold mb-6 border-b pb-2 text-slate-700">Módulos de Gestão Estratégica</h2>
+            
+            <div class="space-y-6">
+                <div class="card-module mod-1 bg-slate-50 p-6 rounded-r-xl">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-800">Gestão N1: Aceleração Básica</h3>
+                            <p class="text-sm text-slate-500">Foco em entrega técnica e tráfego direto.</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="old-price block">De: R$ 1.597,70</span>
+                            <span class="text-xl font-extrabold text-red-600">Por: R$ 958,62</span>
+                        </div>
+                    </div>
+                    <ul class="text-sm space-y-2 text-slate-600">
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Gestão de Tráfego Pago (Meta Ads e Google Ads)</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Criação, otimização e monitoramento de campanhas</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Relatório mensal de métricas (CPL, cliques, conversões)</li>
+                    </ul>
+                </div>
 
-    <div class="section">
-        <span class="time-badge">21:50 - 22:00</span>
-        <h2><span>🏁</span> Check-out & Envio</h2>
-        <ul>
-            <li>Resumo de quem faz o quê (Deadlines).</li>
-            <li>Oração final: Unção para a execução!</li>
-        </ul>
-    </div>
+                <div class="card-module mod-2 bg-slate-50 p-6 rounded-r-xl">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-800">Gestão N2: Estratégia e Performance</h3>
+                            <p class="text-sm text-slate-500">Inteligência comercial e funis de venda.</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="old-price block">De: R$ 2.197,70</span>
+                            <span class="text-xl font-extrabold text-blue-600">Por: R$ 1.318,62</span>
+                        </div>
+                    </div>
+                    <ul class="text-sm space-y-2 text-slate-600">
+                        <li><i class="fa-solid fa-plus text-blue-500 mr-2"></i> <strong>Tudo do N1, mais:</strong></li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Planejamento estratégico de funil</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Roteiros (Scripts) para captação de vídeos</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Copywriting persuasivo para anúncios</li>
+                    </ul>
+                </div>
 
-    <div class="footer">
-        "O Reino de Deus é movimento. Vamos pra cima!"
-    </div>
-</div>
+                <div class="card-module mod-3 bg-slate-50 p-6 rounded-r-xl border-2 border-green-100 shadow-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <div class="bg-green-100 text-green-700 text-[10px] font-bold px-2 py-1 rounded mb-2 inline-block">MAIS COMPLETO</div>
+                            <h3 class="text-lg font-bold text-slate-800">Gestão N3: Assessoria Completa</h3>
+                            <p class="text-sm text-slate-500">Terceirização total da inteligência e produção.</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="old-price block">De: R$ 2.997,70</span>
+                            <span class="text-xl font-extrabold text-green-600">Por: R$ 1.798,62</span>
+                        </div>
+                    </div>
+                    <ul class="text-sm space-y-2 text-slate-600">
+                        <li><i class="fa-solid fa-plus text-green-500 mr-2"></i> <strong>Tudo do N1 e N2, mais:</strong></li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Gestão de Redes Sociais (Calendário Editorial)</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> <strong>Produção In Loco:</strong> 2 visitas mensais para captação</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Edição de vídeos "Antes e Depois"</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-</body>
-</html>
+        <section class="p-10 bg-slate-900 text-white">
+            <h2 class="text-xl font-bold mb-8 text-center uppercase tracking-widest">Condições de Pagamento (Plano N3)</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-slate-800 p-6 rounded-lg text-center border border-slate-700">
+                    <p class="text-xs text-slate-400 uppercase mb-2">Início / Setup</p>
+                    <p class="text-xl font-bold">R$ 599,54</p>
+                </div>
+                <div class="bg-slate-800 p-6 rounded-lg text-center border border-slate-700">
+                    <p class="text-xs text-slate-400 uppercase mb-2">30 Dias</p>
+                    <p class="text-xl font-bold">R$ 599,54</p>
+                </div>
+                <div class="bg-slate-800 p-6 rounded-lg text-center border border-slate-700">
+                    <p class="text-xs text-slate-400 uppercase mb-2">60 Dias</p>
+                    <p class="text-xl font-bold">R$ 599,54</p>
+                </div>
+            </div>
+            <p class="text-[10px] text-center mt-6 text-slate-500">* Parcelamento sem juros exclusivo para parceiros detectados.</p>
+        </section>
+
+        <footer class
