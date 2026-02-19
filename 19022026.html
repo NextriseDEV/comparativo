@@ -3,139 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proposta Comercial - JC&D Design de Reformas</title>
+    <title>Proposta de Tráfego Pago - JC&D Design</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@400;600&display=swap');
-        body { font-family: 'Open Sans', sans-serif; background-color: #f3f4f6; -webkit-print-color-adjust: exact; scroll-behavior: smooth; }
-        h1, h2, h3, h4, .font-title { font-family: 'Montserrat', sans-serif; }
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap');
+        body { font-family: 'Open Sans', sans-serif; background-color: #f3f4f6; }
+        h1, h2, h3, .font-title { font-family: 'Montserrat', sans-serif; }
         .gradient-header { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); }
-        .card-module { border-left: 5px solid; transition: all 0.3s ease; }
-        .card-module:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
-        .mod-1 { border-color: #ef4444; }
-        .mod-2 { border-color: #3b82f6; }
-        .mod-3 { border-color: #10b981; }
-        #discount-banner { transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); transform: translateY(0); }
-        .old-price { text-decoration: line-through; color: #94a3b8; font-size: 0.9rem; }
+        .card-module { border-left: 5px solid; transition: all 0.3s ease; background: white; border-radius: 0 0.75rem 0.75rem 0; }
+        .mod-n1 { border-color: #3b82f6; } /* Blue */
+        .mod-n2 { border-color: #8b5cf6; } /* Purple */
+        .mod-n3 { border-color: #10b981; } /* Green */
+        .old-price { text-decoration: line-through; color: #94a3b8; font-size: 0.85rem; }
     </style>
 </head>
-<body class="py-10 text-slate-800 relative">
+<body class="py-10">
 
-    <div id="discount-banner" class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-yellow-500 to-yellow-600 shadow-2xl border-b-4 border-yellow-700 no-print">
-        <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="bg-white text-yellow-600 rounded-full w-10 h-10 flex items-center justify-center font-bold shadow-sm">
-                    <i class="fa-solid fa-crown"></i>
-                </div>
-                <div>
-                    <p class="font-bold text-white text-sm md:text-base leading-tight">PARCEIRO NEXTRISE DETECTADO</p>
-                    <p class="text-yellow-100 text-xs">Desconto de 40% aplicado sobre o Plano Dominância.</p>
-                </div>
+    <div id="discount-banner" class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-yellow-500 to-yellow-600 shadow-xl py-3 visible transition-transform">
+        <div class="max-w-4xl mx-auto px-4 flex justify-between items-center text-white">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-crown text-xl"></i>
+                <span class="font-bold text-sm uppercase tracking-wider">Desconto Parceiro Muoviti (40% OFF Aplicado)</span>
             </div>
             <div class="text-right">
-                <span class="block text-xs text-yellow-200 font-semibold uppercase">Novo Total (N3)</span>
-                <span class="block text-xl md:text-2xl font-extrabold text-white">R$ 1.798,62</span>
+                <span class="text-xs block opacity-80">Mensalidade N3</span>
+                <span class="text-xl font-black">R$ 1.798,62</span>
             </div>
         </div>
     </div>
 
-    <div class="max-w-4xl mx-auto bg-white shadow-xl rounded-none overflow-hidden relative mt-16">
-        <header class="gradient-header text-white p-12 relative overflow-hidden">
-            <div class="absolute top-0 right-0 opacity-10 transform translate-x-10 -translate-y-10">
-                <i class="fa-solid fa-bullhorn text-9xl"></i>
-            </div>
-            <div class="flex flex-col md:flex-row justify-between items-center gap-8 relative z-10">
-                <div class="bg-white p-4 rounded-lg shadow-lg">
-                    <img src="../../assets/galery/nextriselogo.png" alt="Nextrise" class="h-10">
-                </div>
-                <div class="text-center md:text-right">
-                    <h1 class="text-3xl font-extrabold tracking-tight">PROPOSTA COMERCIAL</h1>
-                    <p class="text-blue-400 font-bold uppercase tracking-widest text-sm">JC&D Design de Reformas</p>
-                </div>
-            </div>
+    <div class="max-w-4xl mx-auto bg-white shadow-2xl mt-12 overflow-hidden">
+        <header class="gradient-header text-white p-12 text-center md:text-left">
+            <h1 class="text-3xl font-extrabold mb-2">PROPOSTA DE TRÁFEGO PAGO</h1>
+            <p class="text-blue-400 font-bold uppercase tracking-widest text-sm">Cliente: JC&D Design de Reformas</p>
         </header>
 
-        <section class="p-10">
-            <h2 class="text-xl font-bold mb-6 border-b pb-2 text-slate-700">Módulos de Gestão Estratégica</h2>
+        <section class="p-8 bg-slate-50 border-b border-slate-200">
+            <div class="flex items-center gap-3 mb-4">
+                <i class="fa-solid fa-bullseye text-blue-600 text-xl"></i>
+                <h2 class="text-xl font-bold text-slate-700">1. Investimento em Anúncios (Verba de Mídia)</h2>
+            </div>
+            <p class="text-sm text-slate-600 mb-6">Valores pagos diretamente ao Google e Meta. Recomendações baseadas no nicho de arquitetura/reformas de alto padrão:</p>
             
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div class="bg-white p-4 border border-slate-200 rounded-lg">
+                    <p class="font-bold text-slate-800"><i class="fa-brands fa-google text-red-500 mr-2"></i>Google Ads</p>
+                    <p class="text-slate-500 mt-1">Sugerido: R$ 450 - R$ 1.500/mês</p>
+                    <p class="text-[10px] text-slate-400 mt-2">Foco: Pessoas buscando "reforma de luxo" agora.</p>
+                </div>
+                <div class="bg-white p-4 border border-slate-200 rounded-lg">
+                    <p class="font-bold text-slate-800"><i class="fa-brands fa-instagram text-pink-500 mr-2"></i>Meta Ads (Insta/Face)</p>
+                    <p class="text-slate-500 mt-1">Sugerido: R$ 300 - R$ 900/mês</p>
+                    <p class="text-[10px] text-slate-400 mt-2">Foco: Desejo visual e autoridade do portfólio.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-8">
+            <div class="flex items-center gap-3 mb-6">
+                <i class="fa-solid fa-handshake text-blue-600 text-xl"></i>
+                <h2 class="text-xl font-bold text-slate-700">2. Honorários de Gestão Estratégica</h2>
+            </div>
+
             <div class="space-y-6">
-                <div class="card-module mod-1 bg-slate-50 p-6 rounded-r-xl">
-                    <div class="flex justify-between items-start mb-4">
+                <div class="card-module mod-n1 p-6 shadow-sm border border-slate-100">
+                    <div class="flex justify-between items-start">
                         <div>
-                            <h3 class="text-lg font-bold text-slate-800">Gestão N1: Aceleração Básica</h3>
-                            <p class="text-sm text-slate-500">Foco em entrega técnica e tráfego direto.</p>
+                            <h3 class="font-bold text-slate-800">N1: Aceleração Básica</h3>
+                            <ul class="text-xs text-slate-500 mt-2 space-y-1">
+                                <li>• Gestão técnica de Meta + Google Ads</li>
+                                <li>• Otimização diária de lances</li>
+                                <li>• Relatórios Mensais</li>
+                            </ul>
                         </div>
                         <div class="text-right">
                             <span class="old-price block">De: R$ 1.597,70</span>
-                            <span class="text-xl font-extrabold text-red-600">Por: R$ 958,62</span>
+                            <span class="text-lg font-bold text-blue-600 uppercase">R$ 958,62/mês</span>
                         </div>
                     </div>
-                    <ul class="text-sm space-y-2 text-slate-600">
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Gestão de Tráfego Pago (Meta Ads e Google Ads)</li>
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Criação, otimização e monitoramento de campanhas</li>
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Relatório mensal de métricas (CPL, cliques, conversões)</li>
-                    </ul>
                 </div>
 
-                <div class="card-module mod-2 bg-slate-50 p-6 rounded-r-xl">
-                    <div class="flex justify-between items-start mb-4">
+                <div class="card-module mod-n2 p-6 shadow-sm border border-slate-100">
+                    <div class="flex justify-between items-start">
                         <div>
-                            <h3 class="text-lg font-bold text-slate-800">Gestão N2: Estratégia e Performance</h3>
-                            <p class="text-sm text-slate-500">Inteligência comercial e funis de venda.</p>
+                            <h3 class="font-bold text-slate-800">N2: Estratégia e Performance</h3>
+                            <ul class="text-xs text-slate-500 mt-2 space-y-1">
+                                <li>• Tudo do N1 +</li>
+                                <li>• Copywriting (textos persuasivos)</li>
+                                <li>• Scripts de roteiro para vídeos de obras</li>
+                                <li>• Relatórios Quinzenais</li>
+                            </ul>
                         </div>
                         <div class="text-right">
                             <span class="old-price block">De: R$ 2.197,70</span>
-                            <span class="text-xl font-extrabold text-blue-600">Por: R$ 1.318,62</span>
+                            <span class="text-lg font-bold text-purple-600 uppercase">R$ 1.318,62/mês</span>
                         </div>
                     </div>
-                    <ul class="text-sm space-y-2 text-slate-600">
-                        <li><i class="fa-solid fa-plus text-blue-500 mr-2"></i> <strong>Tudo do N1, mais:</strong></li>
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Planejamento estratégico de funil</li>
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Roteiros (Scripts) para captação de vídeos</li>
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Copywriting persuasivo para anúncios</li>
-                    </ul>
                 </div>
 
-                <div class="card-module mod-3 bg-slate-50 p-6 rounded-r-xl border-2 border-green-100 shadow-md">
-                    <div class="flex justify-between items-start mb-4">
+                <div class="card-module mod-n3 p-6 shadow-md border-2 border-green-50 bg-green-50/30">
+                    <div class="flex justify-between items-start">
                         <div>
-                            <div class="bg-green-100 text-green-700 text-[10px] font-bold px-2 py-1 rounded mb-2 inline-block">MAIS COMPLETO</div>
-                            <h3 class="text-lg font-bold text-slate-800">Gestão N3: Assessoria Completa</h3>
-                            <p class="text-sm text-slate-500">Terceirização total da inteligência e produção.</p>
+                            <div class="bg-green-100 text-green-700 text-[10px] font-bold px-2 py-0.5 rounded mb-1 inline-block">RECOMENDADO</div>
+                            <h3 class="font-bold text-slate-800">N3: Dominância de Mercado</h3>
+                            <ul class="text-xs text-slate-500 mt-2 space-y-1">
+                                <li>• Tudo do N1 e N2 +</li>
+                                <li>• Social Media (Calendário de Posts)</li>
+                                <li>• 2 visitas mensais para captação de material</li>
+                                <li>• Edição de vídeos "Antes e Depois"</li>
+                            </ul>
                         </div>
                         <div class="text-right">
                             <span class="old-price block">De: R$ 2.997,70</span>
-                            <span class="text-xl font-extrabold text-green-600">Por: R$ 1.798,62</span>
+                            <span class="text-lg font-bold text-green-600 uppercase">R$ 1.798,62/mês</span>
                         </div>
                     </div>
-                    <ul class="text-sm space-y-2 text-slate-600">
-                        <li><i class="fa-solid fa-plus text-green-500 mr-2"></i> <strong>Tudo do N1 e N2, mais:</strong></li>
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Gestão de Redes Sociais (Calendário Editorial)</li>
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> <strong>Produção In Loco:</strong> 2 visitas mensais para captação</li>
-                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Edição de vídeos "Antes e Depois"</li>
-                    </ul>
                 </div>
             </div>
         </section>
 
-        <section class="p-10 bg-slate-900 text-white">
-            <h2 class="text-xl font-bold mb-8 text-center uppercase tracking-widest">Condições de Pagamento (Plano N3)</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="bg-slate-800 p-6 rounded-lg text-center border border-slate-700">
-                    <p class="text-xs text-slate-400 uppercase mb-2">Início / Setup</p>
-                    <p class="text-xl font-bold">R$ 599,54</p>
+        <section class="p-8 bg-slate-900 text-white rounded-t-3xl">
+            <h2 class="text-center font-bold mb-6 text-sm uppercase tracking-widest text-blue-400">Condições Comerciais</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="text-xs space-y-3 opacity-80">
+                    <p><i class="fa-solid fa-calendar-check mr-2"></i> <strong>Fidelidade:</strong> Contrato de 3 meses para maturação do algoritmo.</p>
+                    <p><i class="fa-solid fa-credit-card mr-2"></i> <strong>Pagamento:</strong> Mensal via Boleto ou PIX.</p>
                 </div>
-                <div class="bg-slate-800 p-6 rounded-lg text-center border border-slate-700">
-                    <p class="text-xs text-slate-400 uppercase mb-2">30 Dias</p>
-                    <p class="text-xl font-bold">R$ 599,54</p>
-                </div>
-                <div class="bg-slate-800 p-6 rounded-lg text-center border border-slate-700">
-                    <p class="text-xs text-slate-400 uppercase mb-2">60 Dias</p>
-                    <p class="text-xl font-bold">R$ 599,54</p>
+                <div class="bg-slate-800 p-4 rounded-xl border border-slate-700">
+                    <p class="text-[10px] uppercase text-slate-400 mb-1">Total Sugerido (N3):</p>
+                    <p class="text-2xl font-black">R$ 1.798,62 <span class="text-xs font-normal text-slate-400">/ mensal</span></p>
+                    <div class="mt-2 pt-2 border-t border-slate-700 flex justify-between text-[10px]">
+                        <span>Setup Inicial: Grátis</span>
+                        <span class="text-green-400">Economia: R$ 1.199,08</span>
+                    </div>
                 </div>
             </div>
-            <p class="text-[10px] text-center mt-6 text-slate-500">* Parcelamento sem juros exclusivo para parceiros detectados.</p>
         </section>
-
-        <footer class
+    </div>
+</body>
+</html>
