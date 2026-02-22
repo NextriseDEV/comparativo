@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RS Consultoria | Gestão de Alta Performance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .bg-gradient-soft { background: linear-gradient(135deg, #f4f4f5 0%, #e4e4e7 100%); }
+        .purple-gradient { background: linear-gradient(135deg, #7e22ce 0%, #6d28d9 100%); }
+    </style>
+</head>
+<body class="bg-zinc-50 text-zinc-900 antialiased">
+
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-zinc-200">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="https://nextrisedev.github.io/comparativo/assets/RsLogo.jpeg" alt="RS Logo" class="w-12 h-12 rounded-xl object-contain shadow-sm">
+                <div class="leading-none">
+                    <span class="block text-xl font-extrabold tracking-tight text-zinc-900">RS</span>
+                    <span class="text-[10px] font-bold text-purple-700 uppercase tracking-widest">Consultoria</span>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#quem-somos" class="text-sm font-semibold text-zinc-600 hover:text-purple-700 transition-colors">Quem Somos</a>
+                <a href="#especialista" class="text-sm font-semibold text-zinc-600 hover:text-purple-700 transition-colors">CEO</a>
+                <a href="#pilares" class="text-sm font-semibold text-zinc-600 hover:text-purple-700 transition-colors">Pilares</a>
+                <a href="#contato" class="purple-gradient text-white px-6 py-3 rounded-full text-sm font-bold shadow-lg shadow-purple-200 hover:scale-105 transition-transform">
+                    Diagnóstico Gratuito
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-40 pb-20 bg-gradient-soft relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-purple-100/50 -skew-x-12 translate-x-1/2"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-zinc-200 text-purple-700 text-xs font-bold uppercase tracking-widest mb-8 shadow-sm">
+                        <i data-lucide="award" class="w-4 h-4"></i> Gestão Financeira para seu Negócio
+                    </span>
+                    <h1 class="text-4xl lg:text-6xl font-black text-zinc-900 leading-[1.1] mb-8">
+                        Preparando a sua empresa para uma parceria de <span class="text-purple-700">crescimento, clareza, potencial e performance.</span>
+                    </h1>
+                    <p class="text-zinc-600 text-xl leading-relaxed mb-10 max-w-lg">
+                        Terceirize seu financeiro (BPO), gestão de processos e planejamento estratégico com a metodologia de quem gerenciou e consolidou resultados em toda a América Latina.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contato" class="purple-gradient text-white px-10 py-5 rounded-2xl text-lg font-bold shadow-xl shadow-purple-200 flex items-center justify-center gap-3 group">
+                            Solicitar Análise
+                            <i data-lucide="arrow-right" class="group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="bg-zinc-200 rounded-[40px] p-3 shadow-2xl">
+                        <div class="bg-white rounded-[32px] overflow-hidden border border-zinc-300 p-8 space-y-6">
+                            <div class="text-center pb-4 border-b border-zinc-100">
+                                <span class="text-[10px] font-black text-zinc-400 uppercase tracking-widest">Nossa Essência</span>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="bg-purple-100 p-3 rounded-lg"><i data-lucide="target" class="text-purple-700 w-5 h-5"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-zinc-900 text-lg leading-none mb-1">Missão</h4>
+                                    <p class="text-sm text-zinc-500">Impulsionar o sucesso dos nossos clientes através de gestão financeira de alta performance.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="bg-purple-100 p-3 rounded-lg"><i data-lucide="eye" class="text-purple-700 w-5 h-5"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-zinc-900 text-lg leading-none mb-1">Visão</h4>
+                                    <p class="text-sm text-zinc-500">Ser a principal referência em consultoria estratégica e BPO financeiro do mercado.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="bg-purple-100 p-3 rounded-lg"><i data-lucide="shield-check" class="text-purple-700 w-5 h-5"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-zinc-900 text-lg leading-none mb-1">Valores</h4>
+                                    <p class="text-sm text-zinc-500">Ética, transparência, foco em resultados e excelência operacional.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quem-somos" class="py-20 bg-purple-700 text-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-sm font-bold uppercase tracking-[0.3em] mb-6 opacity-80">Quem Somos</h2>
+            <p class="text-2xl md:text-3xl font-light leading-relaxed max-w-4xl mx-auto italic">
+                "A RS CONSULTORIA liderada e fundada pelo CEO Rodrigo Sousa, formado em Administração de empresa com mais de 15 anos de experiência na área financeira, é especializada em soluções de  BPO Financeiro, Contabilidade, Fiscal, Gestão de  Processos e Planejamento Estratégico, tem como  
+foco a terceirização de serviços financeiros, para  otimizar a gestão de empresas de pequeno, médio e grande porte, de acordo com a necessidade de cada cliente combinando tecnologia, processos sólidos com inteligência e experiência de mercado para potencializar e reestruturar seu negócio."
+            </p>
+        </div>
+    </section>
+
+  <section id="especialista" class="py-24 bg-zinc-100">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
+            <div class="order-2 lg:order-1 relative">
+                <div class="aspect-[4/5] bg-zinc-300 rounded-[48px] overflow-hidden shadow-2xl border-8 border-white">
+                    <img 
+                        src="https://nextrisedev.github.io/comparativo/assets/ceo1.jpeg" 
+                        alt="Rodrigo Sousa - CEO RS Consultoria" 
+                        class="w-full h-full object-cover"
+                    >
+                </div>
+                <div class="absolute -bottom-6 -right-6 bg-white p-8 rounded-3xl shadow-xl border border-zinc-200">
+                    <p class="text-purple-700 font-black text-4xl mb-1">10 Anos</p>
+                    <p class="text-zinc-500 font-bold text-xs uppercase tracking-widest">Em Multinacional Pharma LatAm</p>
+                </div>
+            </div>
+            
+            <div class="order-1 lg:order-2">
+                <h2 class="text-purple-700 font-bold text-sm uppercase tracking-widest mb-4">CEO</h2>
+                <h3 class="text-4xl lg:text-5xl font-black text-zinc-900 mb-8 leading-tight">RODRIGO SOUSA</h3>
+                <p class="text-zinc-900 text-xl font-bold leading-relaxed mb-8 italic">
+                    Transformando potencial em performance e dados em resultados.
+                </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pilares" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-purple-700 font-bold text-sm uppercase tracking-widest mb-4">Nossa Metodologia</h2>
+                <h3 class="text-4xl font-black text-zinc-900">Os 4 Pilares de Atuação</h3>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-8 bg-zinc-50 rounded-3xl border border-zinc-100 hover:shadow-xl transition-all group">
+                    <div class="w-12 h-12 purple-gradient rounded-xl mb-6 flex items-center justify-center text-white">
+                        <i data-lucide="trending-up"></i>
+                    </div>
+                    <h4 class="font-black text-lg mb-4 text-zinc-900 uppercase">1. ESTRATÉGICA</h4>
+                    <p class="text-sm text-zinc-600 leading-relaxed">Ajudar a empresa a decidir se deve expandir para um novo mercado ou adquirir outra empresa.</p>
+                </div>
+                <div class="p-8 bg-zinc-50 rounded-3xl border border-zinc-100 hover:shadow-xl transition-all">
+                    <div class="w-12 h-12 purple-gradient rounded-xl mb-6 flex items-center justify-center text-white">
+                        <i data-lucide="settings"></i>
+                    </div>
+                    <h4 class="font-black text-lg mb-4 text-zinc-900 uppercase">2. GESTÃO / OPERAÇÃO</h4>
+                    <p class="text-sm text-zinc-600 leading-relaxed">Reorganizar a linha de produção para reduzir custos ou melhorar a integração entre departamentos.</p>
+                </div>
+                <div class="p-8 bg-zinc-50 rounded-3xl border border-zinc-100 hover:shadow-xl transition-all">
+                    <div class="w-12 h-12 purple-gradient rounded-xl mb-6 flex items-center justify-center text-white">
+                        <i data-lucide="pie-chart"></i>
+                    </div>
+                    <h4 class="font-black text-lg mb-4 text-zinc-900 uppercase">3. FINANCEIRO</h4>
+                    <p class="text-sm text-zinc-600 leading-relaxed">Criar um orçamento detalhado ou analisar a viabilidade de um novo investimento.</p>
+                </div>
+                <div class="p-8 bg-zinc-50 rounded-3xl border border-zinc-100 hover:shadow-xl transition-all">
+                    <div class="w-12 h-12 purple-gradient rounded-xl mb-6 flex items-center justify-center text-white">
+                        <i data-lucide="cpu"></i>
+                    </div>
+                    <h4 class="font-black text-lg mb-4 text-zinc-900 uppercase">4. Tecnologia (TI)</h4>
+                    <p class="text-sm text-zinc-600 leading-relaxed">Ajudar a empresa a escolher e implementar um novo sistema de CRM (Gestão de Relacionamento com o Cliente).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-32 bg-zinc-900 text-zinc-100">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
+            <div>
+                <h2 class="text-5xl font-black mb-8 leading-tight">Mudar o rumo do seu financeiro só depende de um <span class="text-purple-500 underline underline-offset-8">clique.</span></h2>
+                <div class="space-y-8">
+                    <div class="flex items-center gap-6">
+                        <div class="w-14 h-14 bg-zinc-800 rounded-2xl flex items-center justify-center text-purple-500 border border-zinc-700">
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-zinc-500 uppercase tracking-widest">E-mail</p>
+                            <p class="text-lg font-bold">contato@rsrconsultoria.com.br</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <div class="w-14 h-14 bg-zinc-800 rounded-2xl flex items-center justify-center text-purple-500 border border-zinc-700">
+                            <i data-lucide="phone"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-zinc-500 uppercase tracking-widest">WhatsApp Comercial</p>
+                            <p class="text-lg font-bold">(11) 95176 9953</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-[40px] p-8 lg:p-12 shadow-2xl">
+                <form action="mailto:contato@rsrconsultoria.com.br" method="POST" enctype="text/plain" class="space-y-6 text-zinc-900">
+                    <div class="space-y-2">
+                        <label class="text-[10px] font-black text-zinc-400 uppercase tracking-widest">Nome Completo</label>
+                        <input type="text" name="Nome" required placeholder="Ex: Rodrigo Sousa" class="w-full bg-zinc-50 border border-zinc-200 p-4 rounded-xl focus:border-purple-600 focus:ring-1 focus:ring-purple-600 outline-none transition-all">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-[10px] font-black text-zinc-400 uppercase tracking-widest">E-mail Institucional</label>
+                        <input type="email" name="Email" required placeholder="nome@empresa.com.br" class="w-full bg-zinc-50 border border-zinc-200 p-4 rounded-xl focus:border-purple-600 focus:ring-1 focus:ring-purple-600 outline-none transition-all">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-[10px] font-black text-zinc-400 uppercase tracking-widest">Sua Mensagem / Desafio</label>
+                        <textarea name="Mensagem" rows="4" placeholder="Conte-nos sobre seu desafio atual..." class="w-full bg-zinc-50 border border-zinc-200 p-4 rounded-xl focus:border-purple-600 outline-none transition-all"></textarea>
+                    </div>
+                    <button type="submit" class="w-full purple-gradient text-white py-6 rounded-2xl text-xl font-black shadow-xl shadow-purple-200 hover:scale-[1.02] active:scale-[0.98] transition-all">
+                        Solicitar Diagnóstico
+                    </button>
+                    <p class="text-center text-[10px] text-zinc-400 uppercase font-bold tracking-tighter">🔒 Sigilo e Segurança da Informação garantidos.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-zinc-950 text-zinc-500 border-t border-zinc-900">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+            <div class="flex items-center gap-2">
+                <img src="https://nextrisedev.github.io/comparativo/assets/RsLogo.jpeg" class="w-8 h-8 rounded-lg object-contain">
+                <span class="font-bold text-zinc-300">RS CONSULTORIA</span>
+            </div>
+            <div class="flex gap-8 text-[10px] font-black uppercase tracking-widest">
+                <a href="#" class="hover:text-purple-500">Privacidade</a>
+                <a href="#" class="hover:text-purple-400">Compliance</a>
+                <a href="#" class="hover:text-purple-400">LGPD</a>
+            </div>
+            <p class="text-[10px] font-bold">© 2026 RS CONSULTORIA | High Performance Financial Management</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
