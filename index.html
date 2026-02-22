@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RS Consultoria | Gestão de Alta Performance</title>
+    
+    <link rel="icon" type="image/jpeg" href="https://nextrisedev.github.io/comparativo/assets/RsLogo.jpeg">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -11,6 +14,7 @@
         body { font-family: 'Inter', sans-serif; }
         .bg-gradient-soft { background: linear-gradient(135deg, #f4f4f5 0%, #e4e4e7 100%); }
         .purple-gradient { background: linear-gradient(135deg, #7e22ce 0%, #6d28d9 100%); }
+        /* Ajuste para menu mobile sólido */
         #mobile-menu.hidden { display: none; }
         #mobile-menu { display: flex; }
     </style>
@@ -41,7 +45,7 @@
             </button>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 top-20 bg-white flex-col p-6 gap-6 shadow-2xl z-[60]">
+        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 top-20 bg-white flex-col p-6 gap-6 shadow-xl z-40">
             <a href="#quem-somos" class="text-lg font-bold text-zinc-900 border-b pb-2" onclick="toggleMenu()">Quem Somos</a>
             <a href="#especialista" class="text-lg font-bold text-zinc-900 border-b pb-2" onclick="toggleMenu()">CEO</a>
             <a href="#pilares" class="text-lg font-bold text-zinc-900 border-b pb-2" onclick="toggleMenu()">Pilares</a>
@@ -60,9 +64,29 @@
                     <h1 class="text-3xl md:text-4xl lg:text-6xl font-black text-zinc-900 leading-[1.1] mb-8">
                         Preparando a sua empresa para uma parceria de <span class="text-purple-700">crescimento, clareza, potencial e performance.</span>
                     </h1>
-                    <p class="text-zinc-600 text-lg md:text-xl leading-relaxed mb-10 max-w-lg">
-                        Terceirize seu financeiro (BPO), gestão de processos e planejamento estratégico com a metodologia de quem gerenciou e consolidou resultados em toda a América Latina.
-                    </p>
+                    
+                    <div class="mb-10">
+                        <p class="text-zinc-900 font-extrabold uppercase tracking-wider text-sm mb-4">Para quem é a consultoria:</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3 text-zinc-600">
+                                <span class="text-purple-700 font-bold">✔️</span> 
+                                <span>Empresas que faturam mas não sabem para onde o dinheiro vai</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-zinc-600">
+                                <span class="text-purple-700 font-bold">✔️</span> 
+                                <span>Empresários sobrecarregados com financeiro</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-zinc-600">
+                                <span class="text-purple-700 font-bold">✔️</span> 
+                                <span>Negócios que querem crescer com controle</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-zinc-600">
+                                <span class="text-purple-700 font-bold">✔️</span> 
+                                <span>Empresas que precisam organizar processos internos</span>
+                            </li>
+                        </ul>
+                    </div>
+
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="#contato" class="purple-gradient text-white px-10 py-5 rounded-2xl text-lg font-bold shadow-xl shadow-purple-200 flex items-center justify-center gap-3 group">
                             Solicitar Análise
@@ -113,13 +137,15 @@ foco a terceirização de serviços financeiros, para  otimizar a gestão de emp
                     <img src="https://nextrisedev.github.io/comparativo/assets/ceo1.jpeg" alt="Rodrigo Sousa" class="w-full h-full object-cover">
                 </div>
                 <div class="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-white p-4 md:p-8 rounded-2xl md:rounded-3xl shadow-xl border border-zinc-200">
-                    <p class="text-purple-700 font-black text-2xl md:text-4xl mb-1">10 Anos</p>
-                    <p class="text-zinc-500 font-bold text-[10px] md:text-xs uppercase tracking-widest">Em Multinacional Pharma LatAm</p>
+                    <p class="text-purple-700 font-black text-2xl md:text-4xl mb-1">+de 10 Anos</p>
+                    <p class="text-zinc-500 font-bold text-[10px] md:text-xs uppercase tracking-widest">experiência em multinacional Farmacêutica</p>
                 </div>
             </div>
             <div class="order-1 lg:order-2">
                 <h2 class="text-purple-700 font-bold text-sm uppercase tracking-widest mb-4">CEO</h2>
-                <h3 class="text-3xl md:text-4xl lg:text-5xl font-black text-zinc-900 mb-8 leading-tight uppercase">RODRIGO SOUSA</h3>
+                <h3 class="text-3xl md:text-4xl lg:text-5xl font-black text-zinc-900 mb-2 leading-tight uppercase">RODRIGO SOUSA</h3>
+                <p class="text-purple-700 font-italic text-sm  tracking-widest mb-4">Não somos apenas operacional.
+Somos parceiros estratégicos de crescimento, proporcionado sinergia e resultados reais transformando e cuidado da sua empresa como se fosse a nossa.</p>
                 <p class="text-zinc-900 text-lg md:text-xl font-bold leading-relaxed mb-8 italic">Transformando potencial em performance e dados em resultados.</p>
             </div>
         </div>
@@ -128,7 +154,11 @@ foco a terceirização de serviços financeiros, para  otimizar a gestão de emp
     <section id="pilares" class="py-16 md:py-24 bg-white">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <h2 class="text-purple-700 font-bold text-sm uppercase tracking-widest mb-4">Nossa Metodologia</h2>
-            <h3 class="text-3xl md:text-4xl font-black text-zinc-900 mb-12">Os 4 Pilares de Atuação</h3>
+            <h3 class="text-3xl md:text-4xl font-black text-zinc-900 mb-2">Os 4 Pilares de Atuação</h3>
+            <p class="text-sm text-zinc-600 mb-4">Nossa metodologia foi desenvolvida para empresas que precisam sair do operacional desorganizado e alcançar gestão estruturada, controle financeiro e crescimento sustentável.
+
+“Não entregamos apenas execução.
+Entregamos clareza, estratégia e controle.”</p>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 text-left">
                 <div class="p-8 bg-zinc-50 rounded-3xl border border-zinc-100 hover:shadow-xl transition-all">
                     <div class="w-12 h-12 purple-gradient rounded-xl mb-6 flex items-center justify-center text-white"><i data-lucide="trending-up"></i></div>
@@ -222,32 +252,43 @@ foco a terceirização de serviços financeiros, para  otimizar a gestão de emp
 
         // Máscara de Telefone
         const telInput = document.getElementById('tel-input');
-        telInput.addEventListener('input', (e) => {
-            let x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
-            e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
-        });
+        if (telInput) {
+            telInput.addEventListener('input', (e) => {
+                let x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
+                e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+            });
+        }
 
-        // Menu Mobile
+        // Menu Mobile (Botão e Lógica)
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        function toggleMenu() { mobileMenu.classList.toggle('hidden'); }
-        menuBtn.addEventListener('click', toggleMenu);
+        function toggleMenu() { 
+            mobileMenu.classList.toggle('hidden'); 
+        }
+        if (menuBtn) {
+            menuBtn.addEventListener('click', toggleMenu);
+        }
 
-        // Modal
+        // Modal de Sucesso (Leitura de parâmetro via URL)
         window.onload = function() {
             const urlParams = new URLSearchParams(window.location.search);
             if (urlParams.get('status') === 'success') {
                 const modal = document.getElementById('success-modal');
                 const content = document.getElementById('modal-content');
-                modal.classList.remove('hidden');
-                setTimeout(() => {
-                    content.classList.remove('scale-95', 'opacity-0');
-                    content.classList.add('scale-100', 'opacity-100');
-                }, 10);
+                if (modal && content) {
+                    modal.classList.remove('hidden');
+                    setTimeout(() => {
+                        content.classList.remove('scale-95', 'opacity-0');
+                        content.classList.add('scale-100', 'opacity-100');
+                    }, 10);
+                }
                 window.history.replaceState({}, document.title, window.location.pathname);
             }
         }
-        function closeModal() { document.getElementById('success-modal').classList.add('hidden'); }
+        function closeModal() { 
+            const modal = document.getElementById('success-modal');
+            if (modal) modal.classList.add('hidden'); 
+        }
     </script>
 </body>
 </html>
