@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RS Consultoria | Gestão de Alta Performance</title>
+    
     <link rel="icon" type="image/jpeg" href="https://nextrisedev.github.io/comparativo/assets/RsLogo.jpeg">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -12,11 +14,44 @@
         body { font-family: 'Inter', sans-serif; }
         .bg-gradient-soft { background: linear-gradient(135deg, #f4f4f5 0%, #e4e4e7 100%); }
         .purple-gradient { background: linear-gradient(135deg, #7e22ce 0%, #6d28d9 100%); }
+        /* Ajuste para menu mobile sólido */
         #mobile-menu.hidden { display: none; }
         #mobile-menu { display: flex; }
+
+        /* Estilo do Botão de WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        .whatsapp-float { animation: pulse 2s infinite; }
     </style>
 </head>
 <body class="bg-zinc-50 text-zinc-900 antialiased">
+
+    <a href="https://api.whatsapp.com/send?phone=5511951769953&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20diagn%C3%B3stico%20financeiro%20para%20minha%20empresa." class="whatsapp-float" target="_blank" aria-label="Contato pelo WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+    </a>
 
     <nav class="fixed w-full z-50 bg-white border-b border-zinc-200">
         <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
@@ -42,7 +77,7 @@
             </button>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 top-20 bg-white flex-col p-6 gap-6 shadow-2xl z-[60]">
+        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 top-20 bg-white flex-col p-6 gap-6 shadow-xl z-40">
             <a href="#quem-somos" class="text-lg font-bold text-zinc-900 border-b pb-2" onclick="toggleMenu()">Quem Somos</a>
             <a href="#especialista" class="text-lg font-bold text-zinc-900 border-b pb-2" onclick="toggleMenu()">CEO</a>
             <a href="#pilares" class="text-lg font-bold text-zinc-900 border-b pb-2" onclick="toggleMenu()">Pilares</a>
@@ -61,9 +96,29 @@
                     <h1 class="text-3xl md:text-4xl lg:text-6xl font-black text-zinc-900 leading-[1.1] mb-8">
                         Preparando a sua empresa para uma parceria de <span class="text-purple-700">crescimento, clareza, potencial e performance.</span>
                     </h1>
-                    <p class="text-zinc-600 text-lg md:text-xl leading-relaxed mb-10 max-w-lg">
-                        Terceirize seu financeiro (BPO), gestão de processos e planejamento estratégico com a metodologia de quem gerenciou e consolidou resultados em toda a América Latina.
-                    </p>
+                    
+                    <div class="mb-10">
+                        <p class="text-zinc-900 font-extrabold uppercase tracking-wider text-sm mb-4">Para quem é a consultoria:</p>
+                        <ul class="space-y-1">
+                            <li class="flex items-start gap-3 text-zinc-600">
+                                <span class="text-purple-700 font-bold">✔️</span> 
+                                <span>Empresas que faturam mas não sabem para onde o dinheiro vai</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-zinc-600">
+                                <span class="text-purple-700 font-bold">✔️</span> 
+                                <span>Empresários sobrecarregados com financeiro</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-zinc-600">
+                                <span class="text-purple-700 font-bold">✔️</span> 
+                                <span>Negócios que querem crescer com controle</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-zinc-600">
+                                <span class="text-purple-700 font-bold">✔️</span> 
+                                <span>Empresas que precisam organizar processos internos</span>
+                            </li>
+                        </ul>
+                    </div>
+
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="#contato" class="purple-gradient text-white px-10 py-5 rounded-2xl text-lg font-bold shadow-xl shadow-purple-200 flex items-center justify-center gap-3 group">
                             Solicitar Análise
@@ -114,51 +169,124 @@ foco a terceirização de serviços financeiros, para  otimizar a gestão de emp
                     <img src="https://nextrisedev.github.io/comparativo/assets/ceo1.jpeg" alt="Rodrigo Sousa" class="w-full h-full object-cover">
                 </div>
                 <div class="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-white p-4 md:p-8 rounded-2xl md:rounded-3xl shadow-xl border border-zinc-200">
-                    <p class="text-purple-700 font-black text-2xl md:text-4xl mb-1">10 Anos</p>
-                    <p class="text-zinc-500 font-bold text-[10px] md:text-xs uppercase tracking-widest">Em Multinacional Pharma LatAm</p>
+                    <p class="text-purple-700 font-black text-2xl md:text-4xl mb-1">+de 10 Anos</p>
+                    <p class="text-zinc-500 font-bold text-[10px] md:text-xs uppercase tracking-widest">experiência em multinacional Farmacêutica</p>
                 </div>
             </div>
             <div class="order-1 lg:order-2">
                 <h2 class="text-purple-700 font-bold text-sm uppercase tracking-widest mb-4">CEO</h2>
-                <h3 class="text-3xl md:text-4xl lg:text-5xl font-black text-zinc-900 mb-8 leading-tight uppercase">RODRIGO SOUSA</h3>
-                <p class="text-zinc-900 text-lg md:text-xl font-bold leading-relaxed mb-8 italic">Transformando potencial em performance e dados em resultados.</p>
+                <h3 class="text-3xl md:text-4xl lg:text-5xl font-black text-zinc-900 mb-2 leading-tight uppercase">RODRIGO SOUSA</h3>
+                <p class="text-purple-700 font-italic text-sm  tracking-widest mb-4">Não somos apenas operacional.
+Somos parceiros estratégicos de crescimento, proporcionando sinergia e resultados reais transformando e cuidado da sua empresa como se fosse a nossa.</p>
+                <p class="text-zinc-900 text-lg md:text-xl font-bold leading-relaxed mb-8 italic">"Transformando potencial em performance e dados em resultados."</p>
             </div>
         </div>
     </section>
 
     <section id="pilares" class="py-16 md:py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6 text-center">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12 md:mb-16">
             <h2 class="text-purple-700 font-bold text-sm uppercase tracking-widest mb-4">Nossa Metodologia</h2>
-            <h3 class="text-3xl md:text-4xl font-black text-zinc-900 mb-12">Os 4 Pilares de Atuação</h3>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 text-left">
-                <div class="p-8 bg-zinc-50 rounded-3xl border border-zinc-100 hover:shadow-xl transition-all">
-                    <div class="w-12 h-12 purple-gradient rounded-xl mb-6 flex items-center justify-center text-white"><i data-lucide="trending-up"></i></div>
-                    <h4 class="font-black text-lg mb-4 text-zinc-900 uppercase italic">1. Estratégica</h4>
-                    <p class="text-sm text-zinc-600">Ajudar a empresa a decidir se deve expandir para um novo mercado ou adquirir outra empresa.</p>
+            <h3 class="text-3xl md:text-4xl font-black text-zinc-900 mb-4">Os 4 Pilares de Atuação</h3>
+            <p class="max-w-2xl mx-auto text-sm text-zinc-600">
+                Nossa metodologia foi desenvolvida para empresas que precisam sair do operacional desorganizado e alcançar gestão estruturada, controle financeiro e crescimento sustentável.<br>
+                <span class="font-bold text-purple-700 italic">“Não entregamos apenas execução. Entregamos clareza, estratégia e controle.”</span>
+            </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            <div class="p-8 bg-zinc-50 rounded-3xl border border-zinc-100 hover:shadow-xl transition-all flex flex-col">
+                <div class="w-12 h-12 purple-gradient rounded-xl mb-6 flex items-center justify-center text-white shadow-lg shadow-purple-100">
+                    <i data-lucide="pie-chart"></i>
                 </div>
-                <div class="p-8 bg-zinc-50 rounded-3xl border border-zinc-100 hover:shadow-xl transition-all">
-                    <div class="w-12 h-12 purple-gradient rounded-xl mb-6 flex items-center justify-center text-white"><i data-lucide="settings"></i></div>
-                    <h4 class="font-black text-lg mb-4 text-zinc-900 uppercase italic">2. GESTÃO / OPERAÇÃO</h4>
-                    <p class="text-sm text-zinc-600">Reorganizar a linha de produção para reduzir custos ou melhorar a integração entre departamentos..</p>
+                <h4 class="font-black text-lg mb-4 text-zinc-900 uppercase italic leading-tight">1. Financeiro – Controle e Previsibilidade</h4>
+                <ul class="text-xs text-zinc-500 space-y-2 mb-6 flex-grow">
+                    <li>• Fluxo de caixa projetado</li>
+                    <li>• Conciliação bancária estruturada</li>
+                    <li>• Contas a pagar e receber organizadas</li>
+                    <li>• Indicadores financeiros estratégicos</li>
+                </ul>
+                <div class="pt-4 border-t border-zinc-200">
+                    <p class="text-zinc-900 font-extrabold uppercase tracking-wider text-[10px] mb-2">Resultado:</p>
+                    <ul class="space-y-1">
+                        <li class="flex items-center gap-2 text-xs text-zinc-600"><span class="text-purple-700">✔️</span> Previsibilidade</li>
+                        <li class="flex items-center gap-2 text-xs text-zinc-600"><span class="text-purple-700">✔️</span> Segurança nas decisões</li>
+                        <li class="flex items-center gap-2 text-xs text-zinc-600"><span class="text-purple-700">✔️</span> Redução de riscos</li>
+                    </ul>
                 </div>
-                <div class="p-8 bg-zinc-50 rounded-3xl border border-zinc-100 hover:shadow-xl transition-all">
-                    <div class="w-12 h-12 purple-gradient rounded-xl mb-6 flex items-center justify-center text-white"><i data-lucide="pie-chart"></i></div>
-                    <h4 class="font-black text-lg mb-4 text-zinc-900 uppercase italic">3. Financeiro</h4>
-                    <p class="text-sm text-zinc-600">Criar um orçamento detalhado ou analisar a viabilidade de um novo investimento.</p>
+            </div>
+
+            <div class="p-8 bg-zinc-50 rounded-3xl border border-zinc-100 hover:shadow-xl transition-all flex flex-col">
+                <div class="w-12 h-12 purple-gradient rounded-xl mb-6 flex items-center justify-center text-white shadow-lg shadow-purple-100">
+                    <i data-lucide="settings"></i>
                 </div>
-                <div class="p-8 bg-zinc-50 rounded-3xl border border-zinc-100 hover:shadow-xl transition-all">
-                    <div class="w-12 h-12 purple-gradient rounded-xl mb-6 flex items-center justify-center text-white"><i data-lucide="cpu"></i></div>
-                    <h4 class="font-black text-lg mb-4 text-zinc-900 uppercase italic">4. Tecnologia (TI)</h4>
-                    <p class="text-sm text-zinc-600">Ajudar a empresa a escolher e implementar um novo sistema de CRM (Gestão de Relacionamento com o Cliente).</p>
+                <h4 class="font-black text-lg mb-4 text-zinc-900 uppercase italic leading-tight">2. Gestão / Operação – Organização e Eficiência</h4>
+                <ul class="text-xs text-zinc-500 space-y-2 mb-6 flex-grow">
+                    <li>• Mapeamento de processos</li>
+                    <li>• Padronização de rotinas financeiras</li>
+                    <li>• Criação de checklist e SLA</li>
+                    <li>• Definição clara de responsabilidades</li>
+                </ul>
+                <div class="pt-4 border-t border-zinc-200">
+                    <p class="text-zinc-900 font-extrabold uppercase tracking-wider text-[10px] mb-2">Resultado:</p>
+                    <ul class="space-y-1">
+                        <li class="flex items-center gap-2 text-xs text-zinc-600"><span class="text-purple-700">✔️</span> Menos retrabalho</li>
+                        <li class="flex items-center gap-2 text-xs text-zinc-600"><span class="text-purple-700">✔️</span> Mais produtividade</li>
+                        <li class="flex items-center gap-2 text-xs text-zinc-600"><span class="text-purple-700">✔️</span> Operação escalável</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="p-8 bg-zinc-50 rounded-3xl border border-zinc-100 hover:shadow-xl transition-all flex flex-col">
+                <div class="w-12 h-12 purple-gradient rounded-xl mb-6 flex items-center justify-center text-white shadow-lg shadow-purple-100">
+                    <i data-lucide="trending-up"></i>
+                </div>
+                <h4 class="font-black text-lg mb-4 text-zinc-900 uppercase italic leading-tight">3. Estratégica – Inteligência para Crescer</h4>
+                <ul class="text-xs text-zinc-500 space-y-2 mb-6 flex-grow">
+                    <li>• Reunião mensal de performance</li>
+                    <li>• Análise de margem e rentabilidade</li>
+                    <li>• Planejamento orçamentário (Budget)</li>
+                    <li>• Estudo de precificação</li>
+                </ul>
+                <div class="pt-4 border-t border-zinc-200">
+                    <p class="text-zinc-900 font-extrabold uppercase tracking-wider text-[10px] mb-2">Resultado:</p>
+                    <ul class="space-y-1">
+                        <li class="flex items-center gap-2 text-xs text-zinc-600"><span class="text-purple-700">✔️</span> Decisões em dados</li>
+                        <li class="flex items-center gap-2 text-xs text-zinc-600"><span class="text-purple-700">✔️</span> Aumento de margem</li>
+                        <li class="flex items-center gap-2 text-xs text-zinc-600"><span class="text-purple-700">✔️</span> Crescimento sólido</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="p-8 bg-zinc-50 rounded-3xl border border-zinc-100 hover:shadow-xl transition-all flex flex-col">
+                <div class="w-12 h-12 purple-gradient rounded-xl mb-6 flex items-center justify-center text-white shadow-lg shadow-purple-100">
+                    <i data-lucide="shield-check"></i>
+                </div>
+                <h4 class="font-black text-lg mb-4 text-zinc-900 uppercase italic leading-tight">4. TI / Governança – Segurança e Sustentabilidade</h4>
+                <ul class="text-xs text-zinc-500 space-y-2 mb-6 flex-grow">
+                    <li>• Interface com contabilidade e fiscal</li>
+                    <li>• Controle de obrigações e prazos</li>
+                    <li>• Organização documental</li>
+                    <li>• Política de alçadas financeiras</li>
+                    <li>• Sistema Próprio de Gestão</li>
+                </ul>
+                <div class="pt-4 border-t border-zinc-200">
+                    <p class="text-zinc-900 font-extrabold uppercase tracking-wider text-[10px] mb-2">Resultado:</p>
+                    <ul class="space-y-1">
+                        <li class="flex items-center gap-2 text-xs text-zinc-600"><span class="text-purple-700">✔️</span> Compliance total</li>
+                        <li class="flex items-center gap-2 text-xs text-zinc-600"><span class="text-purple-700">✔️</span> Sigilo de dados</li>
+                        <li class="flex items-center gap-2 text-xs text-zinc-600"><span class="text-purple-700">✔️</span> Continuidade do negócio</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <section id="contato" class="py-20 md:py-32 bg-zinc-900 text-zinc-100">
         <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 md:gap-20 items-center">
             <div>
-                <h2 class="text-3xl md:text-5xl font-black mb-8 leading-tight">Mudar o rumo do seu financeiro só depende de um <span class="text-purple-500 underline underline-offset-8">clique.</span></h2>
+                <h2 class="text-3xl md:text-5xl font-black mb-8 leading-tight">Mudar o rumo da sua EMPRESA só depende de um <span class="text-purple-500 underline underline-offset-8">clique.</span></h2>
                 <div class="space-y-6 md:space-y-8">
                     <div class="flex items-center gap-6">
                         <div class="w-12 h-12 md:w-14 md:h-14 bg-zinc-800 rounded-2xl flex items-center justify-center text-purple-500 border border-zinc-700 shrink-0"><i data-lucide="mail"></i></div>
@@ -223,32 +351,43 @@ foco a terceirização de serviços financeiros, para  otimizar a gestão de emp
 
         // Máscara de Telefone
         const telInput = document.getElementById('tel-input');
-        telInput.addEventListener('input', (e) => {
-            let x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
-            e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
-        });
+        if (telInput) {
+            telInput.addEventListener('input', (e) => {
+                let x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
+                e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+            });
+        }
 
-        // Menu Mobile
+        // Menu Mobile (Botão e Lógica)
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        function toggleMenu() { mobileMenu.classList.toggle('hidden'); }
-        menuBtn.addEventListener('click', toggleMenu);
+        function toggleMenu() { 
+            mobileMenu.classList.toggle('hidden'); 
+        }
+        if (menuBtn) {
+            menuBtn.addEventListener('click', toggleMenu);
+        }
 
-        // Modal
+        // Modal de Sucesso (Leitura de parâmetro via URL)
         window.onload = function() {
             const urlParams = new URLSearchParams(window.location.search);
             if (urlParams.get('status') === 'success') {
                 const modal = document.getElementById('success-modal');
                 const content = document.getElementById('modal-content');
-                modal.classList.remove('hidden');
-                setTimeout(() => {
-                    content.classList.remove('scale-95', 'opacity-0');
-                    content.classList.add('scale-100', 'opacity-100');
-                }, 10);
+                if (modal && content) {
+                    modal.classList.remove('hidden');
+                    setTimeout(() => {
+                        content.classList.remove('scale-95', 'opacity-0');
+                        content.classList.add('scale-100', 'opacity-100');
+                    }, 10);
+                }
                 window.history.replaceState({}, document.title, window.location.pathname);
             }
         }
-        function closeModal() { document.getElementById('success-modal').classList.add('hidden'); }
+        function closeModal() { 
+            const modal = document.getElementById('success-modal');
+            if (modal) modal.classList.add('hidden'); 
+        }
     </script>
 </body>
 </html>
